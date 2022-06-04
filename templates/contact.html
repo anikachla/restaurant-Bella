@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+{% block title%} Contact {% endblock title %}
+
+{%block content%} 
+
+<style>
+    body{
+           background-color: #e9b2b7;      
+    }
+    .up{
+        position: relative;
+        top: -450px;
+  }
+
+</style>
+          
+
+<div class=" container-fluid float-left" >
+{% load static %}
+<img src= "{% static 'images/contactimg1.jpg' %}" class="img-fluid" alt="Responsive image" width="700" height= "500"  px-0>
+
+</div>
+<div class= "float -right" >
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+  {% endblock content %}

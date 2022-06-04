@@ -1,0 +1,8 @@
+<p>
+ This is a TEXT STATIC FILE served just as it is by browser
+ </p>
+ background-color: #DEB887
+superuser :
+Username = anika
+email= anikachawla02@gmail.com
+pw = 1234 

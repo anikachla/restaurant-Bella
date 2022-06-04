@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% block title%} About {% endblock title %}
+
+{%block content%} 
+  <style>
+      body{
+    background-color: #fff3e6;
+      }
+      .up{
+            position: relative;
+            top: -450px;
+      }
+
+  </style>
+
+ {% load static %}
+ <div class="container-fluid float-left">
+     <img src= "{% static 'images/aboutimg.jpg' %}" class="" alt="Responsive image" width="700" height="500" >
+ </div>
+
+ <div class="ml-2 float-right up \">
+     <h1 >  About Us </h1>
+     <div class=" ml-2 float-right ">
+     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
+     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+     Ut enim ad minim veniam, quis nostrud exercitation ullamco <br>laboris nisi ut aliquip
+      ex ea commodo consequat. <br>Duis aute irure dolor in reprehenderit <br>in voluptate velit 
+      esse cillum dolore eu fugiat nulla pariatur.<br> Excepteur sint occaecat cupidatat non
+       proident, sunt in culpa qui officia <br> deserunt mollit anim id est laborum " 
+     </div>
+ </div>
+
+ 
+  {% endblock content %}

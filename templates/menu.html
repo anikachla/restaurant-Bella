@@ -1,0 +1,307 @@
+{% extends 'base.html' %}
+
+
+   {% block title%} Menu {%endblock title%}
+
+    {% block content %}            <!-- content dynamic ,only belonging for index starts-->>
+    <div class="container mt-3">
+      <style>
+         body {
+          background-color: #DEB887
+         }
+       </style>
+
+
+        <!-- thumbnailssssss-->
+    <main role="main">
+        <section class="jumbotron text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Album example</h1>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+              <p>
+                <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+              </p>
+            </div>
+          </section>
+    
+          {% load static %}  
+          <div class="album py-5 bg-light">
+            <div class="container">
+    
+              <div class="row">
+                <!-- menu 1-->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu1.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Masala Dosa <br><h6 class="fw-light"> <i>Baked potatoes with chopped onions stuffed in Dosa. Served with Sambhar and Chutney</i> </h6><br> Price : Rs 80 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">15 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+       <!-- menu img 2-->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu2.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Chole Bhature <br><h6 class="fw-light"> <i> A combination of chana masala fused spicy white chickpeas and bhatura/puri, a fried bread made from maida. </i> </h6><br> Price : Rs 180 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">10 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 2.5 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/daal.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Daal Fry  <br><h6 class="fw-light"> <i>soft-cooked dal (lentils) which is then sautéed in a masala made of onion, tomato, ginger, garlic, and spices in ghee </i> </h6><br> Price : Rs 60 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">15 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!--menu 3 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu3.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Shahi Kadhai Paneer <br><h6 class="fw-light"> <i>  The combination of paneer, onion and colourful bell peppers coated with spicy tomato sauce, aromatic spices and herbs. </i> </h6><br> Price : Rs 180 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">20 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 5 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu5.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Roti and Rice<br><h6 class="fw-light"> <i>Order two Rotis and a bowl of rice on the side for your Daal or vegetables. White Rice boiled,cooked with indian wheat bread.</i> </h6><br> Price : Rs 70 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">8 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 4 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu4.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center>Pure Veg Thali <br><h6 class="fw-light"> <i>
+                         
+                          The thali includes roti, rice, phakala , dalma (signature lentil and vegetables dish),  alu posto , baingan chatka , phulgobi kosha , tamato khatta . </i> </h6><br> Price : Rs 110 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">15 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+ <!-- menu 6-->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu6.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Hakka Noodles <br><h6 class="fw-light"> <i> Boiled noodles with soy sauce and fresh veggies such as cabbage,carrots, spring onions,garlic and beans. Order Manchurian by its side . </i> </h6><br> Price : Rs 160 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">15 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <!-- menu 7-->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu9.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Manchurian balls<br><h6 class="fw-light"> <i>  Gravy filled Manchurian balls. Manchurian has chopped cabbage, carrots,onion,garlic filling coated in Maida and fried.</i> </h6><br> Price : Rs 220 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">20 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <!-- menu 8 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/biryani.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Vegetable Biryani <br><h6 class="fw-light"> <i>Fragrant Rice dum cooked with cumin,coriander,tamarind,cinnamon spices and caramelized onions,beans carrots with saffron infused milk </i> </h6><br> Price : Rs 230 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">12 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <!-- menu 9 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/menu8.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Alfredo Veggie Pizza  <br><h6 class="fw-light"> <i>White Alfredo sauce oven cooked pizza .The toppings include diced capsicums,tomatoes, black Olives, Jalepenos, and of coarse mozzarella cheese.</i> </h6><br> Price : Rs 380 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">24 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 <!-- menu 10  other-->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/pasta.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> White Sauce Pasta <br><h6 class="fw-light"> <i> A silky smooth and aromatic  creamy sauce made from butter, milk and all purpose flour (maida),and munchy red green Bellpeppers, Black Olives . Oregano provided on the side .</i> </h6><br> Price : Rs 280 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">20 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<!-- last -->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/wrap.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Veggie Tortilla Wrap <br><h6 class="fw-light"> <i> A healthy yet fun combinantion  of  all veggies ,such as  capsicums,onions,kale,tomatoes,chillies and paprika covered in saucy Southwest sauce,rolled in Tortillas</i> </h6><br> Price : Rs 210 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                         
+                        </div>
+                        <medium class="text-muted">24 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- menu done -->>
+
+
+              </div>
+            </div>
+          </div>
+    
+        </main>
+    
+       
+          <!-- thumbnailss-->>
+        
+      <!--h2 >  </h2-->
+     {%endblock content%}
