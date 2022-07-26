@@ -1,0 +1,120 @@
+{% extends 'base.html'%}
+{% block title%} Order {% endblock title %}
+
+{%block content%} 
+  <style>
+      body{
+    background-color: #fff3e6;
+      }
+      .up{
+            position: relative;
+            top: -450px;
+      }
+
+  </style>
+
+ {% load static %}
+ 
+
+ <div class="ml-5  float-right up \">
+     
+     <div class=" ml-5 float-right pl-5 ">
+      <h1 class=>  ORDERS.html : localStorage.getItem("txtValue1", {{main.id}});
+        localStorage.getItem("txtValue2", {{main.name}});
+        localStorage.getItem("txtValue3", {{main.desc}});
+        localStorage.getItem("txtValue4",  {{main.price}}); 
+        console.log("button clicked")  ;
+  
+        console.log(txtValue1);
+        console.log(txtValue2);
+        console.log(txtValue3);
+        console.log(txtValue4);</h1>
+     </div>
+ </div>
+
+ 
+  <div class="container mb-5">
+      <div class="row justify-content-center mt-1">
+          <div class="col-md-12 col-sm-12 p-4">
+              {% comment %} <form method="POST"> {% endcomment %}
+                  {% csrf_token %}
+                  <div class="pt-5">
+                      {% for app in starters %}
+                      <div class="row">
+                          <div class="col-md-2 col-sm-12">
+                              <img class="rounded" src="{{ app.image }}" width="150" height="100"/>
+                          </div>
+                          <div class="col-md-8 col-sm-12">
+                              <div class="d-flex flex-row">
+                                  <div class="form-group form-check">
+                                      <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
+                                      <label class="form-check-label">{{ app.name }}</label>
+                                  </div>
+                                  <p class="font-weight-bold pl-5">{{ app.price }}</p>
+                              </div>
+                              <p>{{ app.desc}}</p>
+                          </div>
+                      </div>
+                      <hr />
+                  {% endfor %}
+                  </div>
+  
+                  <div class="pt-5">
+                      {% for main in maincourse %}
+                      <div class="row mt-4">
+                          <div class="col-md-2 col-sm-12">
+                              <img class="rounded" src="{{ main.image }}" width="150" height="100"/>
+                          </div>
+                          <div class="col-md-8 col-sm-12">
+                              <div class="d-flex flex-row">
+                                  <div class="form-group form-check">
+                                      <input type="checkbox" name="items[]" class="form-check-input" value="{{ main.pk }}">
+                                      <label class="form-check-label">{{ main.name }}</label>
+                                  </div>
+                                  <p class="font-weight-bold pl-5">{{ main.price }}</p>
+                              </div>
+                              <p>{{ main.desc }}</p>
+                          </div>
+                      </div>
+                      <hr />
+                      {% endfor %}
+                  </div>
+  
+                  <div class="pt-5">
+                      {% for dessert in sweets %}
+                      <div class="row mt-4">
+                          <div class="col-md-2 col-sm-12">
+                              <img class="rounded" src="{{ dessert.image.url }}" width="150" height="100"/>
+                          </div>
+                          <div class="col-md-8 col-sm-12">
+                              <div class="d-flex flex-row">
+                                  <div class="form-group form-check">
+                                      <input type="checkbox" name="items[]" class="form-check-input" value="{{ dessert.pk }}">
+                                      <label class="form-check-label">{{ dessert.name }}</label>
+                                  </div>
+                                  <p class="font-weight-bold pl-5">{{ dessert.price }}</p>
+                              </div>
+                              <p>{{ dessert.desc }}</p>
+                          </div>
+                      </div>
+                      <hr />
+                      {% endfor %}
+                  </div>
+  
+                  <form action = "/order_confirmation" method="post">
+  
+                  <button class="btn btn-dark mt-5">Place Order!</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  {% endblock content %}
+  {% block js%}
+  <script>
+  function gt() {
+    var txt = document.getElementById("txtValue1").value;
+    alert(txt);
+  }
+  </script>
+  {% endblock js%}
+  

@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+
+   {% block title%} Menu {%endblock title%}
+
+    {% block content %}            <!-- content dynamic ,only belonging for index starts-->>
+    <div class="container mt-3">
+      <style>
+         body {
+          background-color: #DEB887
+         }
+       </style>
+
+
+        <!-- thumbnailssssss-->
+    <main role="main">
+        <section class="text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Starters</h1>
+        <h2 class="italic">Live to eat and eat to live </h2>
+              <p>
+                <a href="/menu" class="btn btn-secondary my-2">Order Main Course</a>
+                <a href="/sweets" class="btn btn-secondary my-2"> Order Sweet Course</a>
+              </p>
+            </div>
+          </section>
+    
+          {% load static %}  
+          <div class="album py-5 bg-dark">
+            <div class="container">
+    
+              <div class="row">
+                <!-- menu 1-->
+
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/starter4.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> SAMOSA  <br><h6 class="fw-light"> <i>The chatpata all time favourite snack, consisting of Potatoes,Peas, Onions served with Tamarind(Imli) Chutney</i> </h6><br> Price : Rs 40 /- per plate
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">7 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+       <!-- menu img 2-->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/starter5.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> KOTHIMBIR WADI <br><h6 class="fw-light"> <i> 
+                          Kothimbir Vadi is a Maharshtrian snack recipe made using cilantro (kothimbir) and gram flour (chickpea flour). 
+                            </i> </h6><br> Price : Rs 70 /- per plate
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">10 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 2.5 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/starter6.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> BUN MUSKA <br><h6 class="fw-light"> <i> Wheat/Maida  Buns smeared with generous amounts of butter , served with jam </i> </h6><br> Price : Rs 60 /- per plate
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">5 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!--menu 3 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/starter1.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> PANEER KABAB <br><h6 class="fw-light"> <i>  The combination of grilled paneer, onion and colourful bell peppers coated with spicy tomato sauce, aromatic spices and herbs  </i> </h6><br> Price : Rs 180 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">20 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 5 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/starter2.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center>VEGGIE SALAD <br><h6 class="fw-light"> <i> Seasonal Salad made from Lettuce, Kale, Cilantro, Herbs and Mayonise .Order this on the side for your Daal. White Rice boiled,cooked with indian wheat bread.</i> </h6><br> Price : Rs 60 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">8 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 6 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/starter3.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> MASALA PAPAD<br><h6 class="fw-light"> <i>
+                         
+                             A native Maharshtrian snack made of fried Papad and tossed onions,tomatoes,cilantro,and Seviya . Goes well with Daal Roti.</i> </h6><br> Price : Rs 50 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">15 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  <!-- menu done -->
+
+              </div>
+            </div>
+          </div>
+    
+        </main>
+    
+       
+          <!-- thumbnailss-->>
+        
+      <!--h2 >  </h2-->
+     {%endblock content%}

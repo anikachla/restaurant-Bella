@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+
+   {% block title%} Menu {%endblock title%}
+
+    {% block content %}            <!-- content dynamic ,only belonging for index starts-->>
+    <div class="container mt-3">
+      <style>
+         body {
+          background-color: #DEB887
+         }
+       </style>
+
+
+        <!-- thumbnailssssss-->
+    <main role="main">
+        <section class="text-center">
+          <div class="container">
+            <h1 class="jumbotron-heading">Sweet Add Ons</h1>
+        <h2 class="italic"> Satisfy your sweet tooth !!</h2>
+              <p>
+                <a href="/starters" class="btn btn-secondary my-2"> Order Starters </a>
+                <a href="/menu" class="btn btn-secondary my-2"> Order Main Course </a>
+              </p>
+            </div>
+          </section>
+    
+          {% load static %}  
+          <div class="album py-5 bg-dark">
+            <div class="container">
+    
+              <div class="row">
+                <!-- menu 1-->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/icecream1.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center>Chocolate Ice Cream <br><h6 class="fw-light"> <i>Chocolate Creamy Ice Cream made from cocoa ,milk,sugar,butter and honey <br><br></i> </h6><br> Price : Rs 170 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">5 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+       <!-- menu img 2-->
+                <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/icecream2.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> Strawberry Ice Cream <br><h6 class="fw-light"> <i>Strawberry slices added in Whipped Cream and Vanilla ice cream give you the ultimate Mahabaleshwar feels.  </i> </h6><br> Price : Rs 180 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">5 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 2.5 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/juice1.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center>ORANGE JUICE <br><h6 class="fw-light"> <i>Freshly squeezed juice from Oranges rich in Vitamin C.Ice cubes and little sugar is added. </i> </h6><br> Price : Rs 90 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">7 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!--menu 3 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/halwa.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center> GAAJAR ka HALWA<br><h6 class="fw-light"> <i> A traditional North Indian dessert made by simmering fresh grated carrots with full fat milk,sugar and ghee,garnished with chopped nuts.
+                        </i> </h6><br> Price : Rs 220/-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">10 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 5 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/coffee.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center>COLD COFFEE <br><h6 class="fw-light"> <i> Chilled coffee with whipped cream and sprinkled cocoa powder. Creamy and Choclatey. <br> <br> </i> </h6><br> Price : Rs 70 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">10 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                 <!-- menu 4 -->
+                 <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                    <img src= "{% static 'images/juice2.jfif' %}" class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap" width="110" height="210">
+                    <div class="card-body">
+                      <h4 text-center>
+                      <p class="card-text">
+                         <p class="fw-normal" text-center>MIXED FRUIT JUICE <br><h6 class="fw-light"> <i>
+                         
+                            The mixture of goody fruits such as Guavas, Oranges,Watermelons,Pineapples and Pomegranates. </i> </h6><br> Price : Rs 110 /-
+                           </p>
+                      </p>
+                    </h4>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Order</button>
+                         
+                        </div>
+                        <medium class="text-muted">7 mins to prepare</medium>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- menu done -->>
+
+
+              </div>
+            </div>
+          </div>
+    
+        </main>
+    
+       
+          <!-- thumbnailss-->>
+        
+      <!--h2 >  </h2-->
+     {%endblock content%}

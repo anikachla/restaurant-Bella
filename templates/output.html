@@ -1,0 +1,381 @@
+
+{% extends 'base.html'%}
+{% block title%} order{% endblock title %}
+
+{%block content%} 
+  <style>
+      body{
+    background-color: #fff3e6;
+      }
+      .up{
+            position: relative;
+            top: -450px;
+      }
+      .right
+      {
+        align-self: center;
+        background-color:  #fff3e3;
+        display: block;
+        font: 1rem 'Fira Sans', sans-serif;
+      }
+      
+    
+    
+    input[type="text"],textarea{
+      font-weight: bold;
+     
+    }
+    table,
+    tr,
+    td {
+      border: 2px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+      margin-top: 30px;
+      margin: 0 auto;
+
+    }
+
+    .pricelist {
+      text-align: center;
+    }
+
+    .mybutton {
+      background-color: #4CAF50;
+
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      border: none;
+      display: inline-block;
+      font-size: 16px;
+
+      cursor: pointer;
+      background-color: #555555;
+      border-radius: 4px;
+    }
+
+    #entrybox {
+      width: 20%;
+      height: 43px;
+      margin-left: 5px;
+      border: 2px solid #b4b39d;
+      border-radius: 6px;
+      background-color: #c3c2ab;
+    }
+
+    .bill {
+      margin-left: 15%;
+      margin-right: 20%;
+
+    }
+
+    .bill1 {
+      margin-left: 33%;
+      margin-right: 20%;
+
+    }
+
+    #sf {
+      height: 48px;
+      border: 2px solid #b4b39d;
+      border-radius: 4px;
+    }
+
+    .bill2 {
+      margin-left: 75%;
+      position: relative;
+    }
+     .bill3 {
+      margin-left: 50%;
+      position: absolute;
+    }
+    
+    @media print { 
+      .no-print { display:none; } 
+    }
+      
+      
+
+  </style>
+
+ {% load static %}
+
+
+ <div class="no-print">
+     
+     <div class>
+      <h1 class>  </h1>
+
+     <table class="table table table-dark my-5 mr-5 ml-5 no-print" id="mytable">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Price </th>
+            <th scope="col" > Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            {% comment %} output.html has bill -- start table row {% endcomment %}
+          <tr>
+            <th scope="row">1</th>
+            <td>{{food.name}}</td>
+            <td id="myprice">{{food.price}}</td>
+            <td> <div class="col-lg-2 ">
+                <div class="input-group ">
+              
+                  <span class="input-group-btn">
+                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                      <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                </span>
+                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="5">
+                <span class="input-group-btn">
+                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </span>
+        </div>
+</div>
+</td>
+          </tr>
+          {% comment %} tr ends, next row begins {% endcomment %}
+          <tr>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+
+      
+                            {% comment %} {% csrf_token %} {% endcomment %}
+
+
+                <!--form 2 fields .-->
+ <div class="container no-print">
+  <div class="panel panel-primary">
+    <div class="panel-heading"></div>
+      <div class="panel-body">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label"><h3>First Name </h3></label>
+                  <input type="text" class="form-control" name="fname" id="fname">
+               </div>
+            </div>
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label"> <h3>Last Name </h3></label>
+                  <input type="text" class="form-control" name="lname" id="lname">
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-6">
+               <div class="form-group">
+                  <label class="control-label"><h3> Email </h3></label>
+                  <input type="text" class="form-control" name="email" id="email">
+               </div>
+            </div>
+            <div class='col-md-6'>
+              <h3>Schedule your order</h3>
+               <div class="form-group">
+                <label for="meeting-time">  </label>
+
+                <input type="datetime-local" id="meeting-time"
+                       name="meeting-time" value="2018-06-12T19:30"
+                       min="2022-06-07 T00:00" max="2022-06-30 T00:00">
+               </div>
+            </div>
+        </div>
+        {% comment %} <form action="/order_confirmation/{{food.id}}/" method="post">{% csrf_token %}
+          
+          <input type="submit" value="Save your details"  class="btn btn-primary" />
+      </form> {% endcomment %}
+       
+      </div>
+   </div>
+</div>
+      
+   </div>
+</div>
+
+  <!--form 2 fields .-->
+
+
+  <!-- buttons-->>
+  <div class="btn-group mt-1 no-print" role="group" aria-label="Basic example" id="buttongroup">
+  <input type="submit" value="View Bill" button onclick=getMe() class="btn btn-secondary cart text-center bill2 "  id= "getme"  name="confirm">
+</button>
+ 
+ <input type="submit" value="Print bill" button onclick= printpage() class="btn btn-secondary  bill2" id="printbill">
+
+ <form action='/order_confirmation/{{food.id}}/' method="POST">
+  {%csrf_token%}
+  
+  <input type="submit" value="Confirm Order"  class="btn btn-secondary cart  bill2"    name="confirm">
+      </button>
+    </form>
+  </div>
+       <!--buttons-->
+
+                    
+  {% endblock content %}
+
+
+ {%block extra%}
+ <div id = "writeme1">
+  <textarea class="center bill" cols="100" rows="15" id="writeme" onclick=printpage() class="ml-5 mx-3 right" readonly spellcheck="false">
+
+    
+  </textarea>
+</div>
+  {%endblock extra%}
+
+
+  {% block js%}
+<script>
+  $(document).ready(function(){
+
+    var quantitiy=1;
+       $('.quantity-right-plus').click(function(e){
+            
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+            
+            // If is not undefined
+                if(quantity<6){
+                $('#quantity').val(quantity + 1);
+                }
+              
+                // Increment
+            
+        });
+    
+         $('.quantity-left-minus').click(function(e){
+            // Stop acting like a button
+            e.preventDefault();
+            // Get the field name
+            var quantity = parseInt($('#quantity').val());
+            
+            // If is not undefined
+          
+                // Increment
+                if(quantity>0){
+                $('#quantity').val(quantity - 1);
+                }
+        });
+        
+    });
+    
+   $(document).ready(function(){
+    $("textarea[name='fname']").val("");    
+ });
+      function ValidateData() {
+   
+       if ($("textarea").is(":visible")) {
+           var x = $("textarea[name='fname']").val();
+           if (x == null || x == "") {
+               alert("In if " + x);
+               return false;
+           }
+           else {
+                 alert("In else" + x);
+           }
+       }
+       else {
+               return true
+       }
+   }
+
+    {% comment %} var adder = document.querySelector("#getme");
+    adder.addEventListener("click", getMe); {% endcomment %}
+
+    //var by = document.querySelector("#out");
+    //by.addEventListener("click", checkOut);
+
+    function printpage()
+    {
+
+     // var body = document.getElementById('body').innerHTML;
+      //var data = document.getElementById('writeme').innerHTML;
+
+      // swap
+     console.log("body");
+     console.log(body);
+     // console.log("data");
+      //console.log(data);
+
+      //document.getElementById('body').innerHTML= data;
+      window.print();
+      
+      //document.getElementById('body').innerHTML = body;
+
+    }
+   
+    function getMe() {
+    
+    var total = 0;
+    var str1 = document.getElementById("fname").value ;
+    var str2 = document.getElementById("lname").value ;
+    var str3 =document.getElementById("email").value ;
+    var dt = document.getElementById("meeting-time").value ;
+
+
+    
+    quant = document.querySelector("#quantity").value;
+    console.log("qUANT");
+    console.log(quant);
+    //var myprice = document.querySelector("#myprice").value;
+    var myprice= "{{food.price}}"
+    var total= myprice* quant;
+    var tax = total*0.05;
+    var tip = total *0.02;
+    var tt= total+tax+tip;
+
+    console.log("myprice ");
+    console.log(myprice);
+    console.log("total");
+    console.log(total);
+
+    gw = document.querySelector("#writeme");
+    document.getElementById('writeme').innerHTML = '';
+    gw.value += "--------------------------------------------------------------------\n";
+    gw.value += "  CAFE BELLA"
+    gw.value +=  "\n"+str1+"       "+str2 +"       "+str3+ "        "+dt+ "  \n";
+    gw.value += "------------------------------------------------------------------\n";
+    gw.value += "You ordered :                     "+"{{food.name}}"+ "\n";
+    gw.value += "Number of items :                   "+ quant+ "\n";
+    gw.value += "Price per plate :                        Rs "+ "{{food.price}}" +"\r";
+    gw.value += "Total items bill :                        Rs "+ total +"\n";
+    gw.value += "GST Tax Charges 5% :               Rs "+ tax + "\n";
+    gw.value += "Tip Charges 2% :                       Rs "+ tip+ "\n";
+    gw.value += "--------------------------------------------------------------------\r";
+    gw.value += "Your Total Bill Is =                    " + tt + " Rs  \n Thanks  Visit Again ! :)\r";
+    gw.value += "--------------------------------------------------------------------\r";
+    
+
+   
+    }
+    
+      $(function () {
+        $('#datetimepicker1').datetimepicker();
+     });
+ 
+     function clearMe () {
+      gw = document.querySelector("#writeme");
+      gw.value = " ";
+    }
+
+   
+    var by = document.querySelector("#out");
+    //by.addEventListener("click", checkOut);
+    
+
+</script>
+
+  {%endblock js%}

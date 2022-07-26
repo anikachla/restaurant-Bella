@@ -6,3 +6,14 @@ superuser :
 Username = anika
 email= anikachawla02@gmail.com
 pw = 1234 
+
+
+button class="btn btn-secondary cart my-2"
+ // var x = document.getElementById("confirm");
+     //x.addEventListener("mouseover", done);
+     //done() {
+    // document.getElementById("printtot").innerHTML = total;
+    // } {% endcomment %}
+
+     on_delete=models.SET(0)
+     models.ForeignKey(Dish, unique=True,null = True,on_delete=models.SET(0))
