@@ -26,7 +26,7 @@
     
     
     
-     View  Demonstration :
+    Demonstration :
      
     https://github.com/anikachla/restaurant-Bella/blob/master/bandicam-final2mov.mov
     
