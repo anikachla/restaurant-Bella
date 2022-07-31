@@ -1,5 +1,5 @@
 
-<h2>Restaurant-Bella</h2>
+<h1>Restaurant-Bella</h1>
  A Restaurant site for ordering favourite dishes without waiting for the staff or while travelling.
  
  <i>( please use the master branch )</i>
