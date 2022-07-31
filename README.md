@@ -19,7 +19,9 @@
     <li>A  website which takes your order beforehand and serve you on your desired time of arrival </li>
     <li>It remembers your details and orders in a Database </li>
     <li> Reduces labour costs for manager and waiters.</li>
-    <li> Organized ordering beforehand decreases the waiting time at canteen/restaurant </li>
+    <li> Scheduling the order at a certain time decreases the waiting time  and load at canteens/restaurants </li>
+    
+  <h4>~ Anika Chawla</h4>
     
     
 
