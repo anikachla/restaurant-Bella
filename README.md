@@ -24,13 +24,16 @@
     <li> Reduces labour costs for manager and waiters.</li>
     <li> Scheduling the order at a certain time decreases the waiting time  and load at canteens/restaurants </li>.
     
-    
-    
-    Demonstration :
      
-    https://github.com/anikachla/restaurant-Bella/blob/master/bandicam-final2mov.mov
+  <h4>
+  Open the link for demo
+  <h4>
+  
+    https://drive.google.com/file/d/1Q10URjeQGmsoCf-GDfW6PgWxWm0fIQmw/view?usp=sharing
     
-    
-  <h4>~ Anika Chawla</h4>
+  
+  
+  <h4>
+  ~ Anika Chawla</h4>
     
     
