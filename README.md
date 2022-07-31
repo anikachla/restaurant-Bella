@@ -24,6 +24,8 @@
     <li> Reduces labour costs for manager and waiters.</li>
     <li> Scheduling the order at a certain time decreases the waiting time  and load at canteens/restaurants </li>
     
+    
+    
   <h4>~ Anika Chawla</h4>
     
     
