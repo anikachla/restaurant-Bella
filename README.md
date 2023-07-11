@@ -1,7 +1,7 @@
 <h2>Restaurant-Bella</h2>
  A Restaurant site for ordering favourite dishes without waiting for the staff or while travelling.
  
- <i>( please use the master branch )</i>
+ <i>( please refer to the master branch )</i>
  
  
  <h2> TechStack used </h2>
